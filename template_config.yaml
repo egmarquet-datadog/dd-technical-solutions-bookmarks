@@ -1,0 +1,7 @@
+bookmarks:
+  - url: "https://www.datadoghq.com/"
+    label: "This is the display name for the bookmark"
+    comment: "This comment summarizes what the bookmark is for"
+  - url: "https://www.google.com"
+    label: "Google"
+    comment: "Google is the best way to find our own documentation"
