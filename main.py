@@ -26,7 +26,7 @@ def generate_bookmark_html(current_directory, html_accumulator, depth=1):
             except TypeError: # Skip empty yaml files
                 pass
             except KeyError as e:
-                raise KeyError("An error was encountered parsing a configuration yaml file. Most likely the 'url' or 'label' field is missing.") from e
+                raise KeyError(f"An error was encountered parsing a configuration yaml file: {config_file}. Most likely the 'url' or 'label' field is missing. From {str(e)}") from e
 
     # Iterate over sub-folders, return recursive call
     subfolders = [ f.path for f in os.scandir(current_directory) if f.is_dir() ]
