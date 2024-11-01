@@ -11,6 +11,8 @@ jobs:
         with:
           python-version: 3.8 #install the python needed
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
       - run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           python main.py {{ github.sha }}
