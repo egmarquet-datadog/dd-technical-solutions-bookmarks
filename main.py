@@ -47,7 +47,6 @@ def generate_bookmarks():
         html += generate_bookmark_html(directory, "")
     html += "\n</DL>"
 
-    print(html)
     return html
 
 def generate_release(commit_id):
